@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Final project</title>
+    <style>*{
+        margin: 0px;
+        padding: 0px;
+    }
+    :root{
+        --navbar-height:59px;
+    }
+    #navbar{
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 0px;
+        position: sticky;
+       
+    }
+    #logo img{
+        height: 60px;
+        width: 80px;
+        border-radius: 300px;
+    }
+    
+    #navbar ul{
+        display: flex;
+        text-align: center;
+    }
+    #navbar::before{
+        content: "";
+        background-color: black;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0.8;
+    }
+    #navbar ul li{
+        list-style: none;
+        font-size: 1.3rem;
+        font-family: 'Rubik Moonrocks', cursive;
+        
+    }
+    #navbar ul li a{
+        color: white;
+        display: block;
+        padding: 3px 23px;
+        border-radius: 15px;
+        text-decoration: none;
+    }
+    #navbar ul li a:hover{
+        color: black;
+       background-color: white;
+    }
+    
+    /* home section */
+    
+    #home{
+        display: flex;
+        flex-direction: column;
+        padding: 3px 100px;
+        height: 604px;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Rubik Moonrocks', cursive;
+    }
+    #home::before{
+        content: "";
+        background: url(/photos/pizza-329523.jpg) no-repeat center center/cover;
+        position: absolute;
+        height: 95%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0.5;
+    }
+    #home h1{
+        color:black;
+        text-align: center;
+        font-family: 'Rubik Moonrocks', cursive;
+    }
+    #home p{
+        color: black;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    #services{
+        display: flex;
+        margin: 4px;
+       
+    }
+    #services .box{
+        border: 2px solid red;
+        border-radius: 23px;
+        margin: 8px 45px;
+        padding: 13px;
+        background-color: rgb(142, 180, 182);
+        text-align: center;
+        color: white;
+        font-size: 1.3rem;
+       transition-property: all;
+       transition-duration: 2s;
+       
+    }
+    #services .box:hover{
+     background-color: red;
+     border-radius: 100px;
+    transform: rotate(360deg);
+     
+    
+    }
+    #services .box img{
+      height: 150px;
+      margin: auto;
+      display: block;
+      border-radius: 15px;
+    }
+    #services .box p{
+        font-family: 'Rubik Moonrocks', cursive;
+    }
+    /* #services{}
+    #services{}
+    #services{}
+    #services{} */
+    
+    .h-primary{
+        font-size: 2.3rem;
+        padding: 12px;
+        text-align: center;
+    }
+    .btn{
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: red;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    /* service section */
+    .h-secondory{
+        font-size: 3.5rem;
+        padding: 0px;
+       text-align: center;
+    }
+    
+    /* clients section */
+    /* #client-section{
+       
+        text-align: center;
+    } */
+    #client-section::before{
+        content: "";
+        position: absolute;
+        background: url(/photos/plane-1362587_1920.jpg) center center/cover;
+        height: 54%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.3;
+    
+    }
+    
+    #clients{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .client-item{
+        transition-property: all;
+        transition-duration: 3s;
+    
+    }
+    .client-item:hover{
+        transform: rotate(1080deg);
+    }
+    #clients img{
+     border-radius: 30px;
+     height: 150px;
+    }
+    .client-item{
+        padding: 34px;
+    }
+    /* contact section */
+    #contact{
+        position: relative;
+    }
+    #contact::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.4;
+        background: url(/photos/stones-167089.jpg)no-repeat center center/cover;
+    }
+    #contact-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+        
+    }
+    #contact-box input{
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+    }
+    
+    
+    #contact-box textarea{
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+    }
+    #contact-box form{
+        width: 40%;
+    }
+    #contact-box label{
+        font-size: 1.3rem;
+        font-family:'Rubik Moonrocks', cursive ;
+    }
+    .alert{
+        color: aliceblue;
+    }
+    table, th, td {
+          border:1px solid black;
+          background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+     <nav id="navbar">
+        <div id="logo">
+            
+     
+            <img src="/photos/vegetables-155616_1280.png" alt="">
+        </div>
+        <ul>
+            <li class="list"><a href="#home">Home</a></li>
+            <li class="list"><a href="/services.html">services</a></li>
+            <li class="list"><a href="/client.html">Clients</a></li>
+            <li class="list"><a href="/table.html">table</a></li>
+            <li class="list"><a href="/contact.html">Contect As </a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary"> Welcome to my online meal</h1>
+        <p> I hope you enjoyed it
+
+        </p>
+        <p>Good luck!
+
+            
+        </p>
+        <button class="btn">order now</button>
+    </section>
+
+    <section id="container">
+        <h1 class="h-secondory">Our services</h1>
+        <div id="services">
+            <div class="box">
+                
+                <h2 class="h-secondary-center"> food ordring </h2>
+                <p class="center">
+                    Good
+                </p>
+             </div>
+            <div class="box">
+                <img src="/photos/crab-42880_1280.png" alt="">
+                <h2 class="h-secondary-center"> Food Cetering</h2>
+                <p class="center">Nice</p>
+             </div>
+            <div class="box">
+                <img src="/photos/strawberries-2500159_1920.png" alt="">
+                <h2 class="h-secondary-center"> food bulking </h2>
+                <p class="center">Welcome to my web page</p>
+             </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center"> Our Clients </h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="/photos/google-logo.png"  alt="">
+            </div>
+            <div class="client-item">
+                <img src="/photos/apple-logo.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="/photos/microsoft-logo.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="/photos/amazon-logo.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="/photos/mushrooms-1992408_1280.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary">Contect As</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                   <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="enter your name">
+                </div>
+                <div class="form-group">
+                   <label for="email">email</label>
+                    <input type="email" name="name" id="email" placeholder="enter your email">
+                </div>
+                <div class="form-group">
+                   <label for="phone">Contact Number</label>
+                    <input type="phone" name="name" id="phone" placeholder="enter your number">
+                </div>
+                <div class="form-group">
+                   <label for="message">message:</label>
+                    <textarea name="message" id="message" cols="20" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+    <table style="width:100%">
+        <tr>
+          <th>Person 1</th>
+          <th>Person 2</th>
+          <th>Person 3</th>
+        </tr>
+        <tr>
+          <td>SAM</td>
+          <td>Strak</td>
+          <td>Thor</td>
+        </tr>
+        <tr>
+          <td>contect: 678494942</td>
+          <td>contect: 748499349</td>
+          <td>Contect: 739933939</td>
+        </tr>
+        <tr>
+          <td>age : 35</td>
+          <td>age: 67</td>
+          <td>age: 55</td>
+        </tr>
+      </table>
+</body>
+</html>
